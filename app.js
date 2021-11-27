@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-app.listen(3030, () => console.log('Servidor Arriba'));
+let port = process.env.PORT || 3030;
+
+app.listen(port, () => console.log('Servidor Arriba'));
 
 app.use(express.static('public'));
 
